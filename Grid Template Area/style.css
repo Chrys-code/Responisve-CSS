@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+
+/*
+Create grid template
+Define grid-template-areas by naming sections/tiles
+Grid container 100vh
+*/
+.grid-container {
+  background-color: rgba(255, 166, 0, 0.479);
+  height: 100vh;
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 12fr 1fr;
+    grid-template-areas: "header header header header header header"
+                          "sidebar main2 main2 main2 main2 sidebar2"
+                         "footer footer footer footer footer footer";
+}
+
+
+/* Assign area title for each class to define section */
+.header {
+  grid-area: header;
+  background-color: rgb(255, 210, 179);
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: rgba(255, 172, 248, 0.5);
+}
+
+.main2 {
+  grid-area: main2;
+  background-color: rgba(194, 255, 255, 0.5);
+}
+
+
+.sidebar2 {
+  grid-area: sidebar2;
+  background-color: rgb(255, 175, 166);
+}
+
+.footer {
+  grid-area: footer;
+  background-color: rgb(173, 253, 208);
+}
+
+p {
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+
+  .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 12fr 1fr;
+    grid-template-areas:  "header header header"
+                          "sidebar sidebar sidebar"
+                          "main2 main2 sidebar2"
+                          "footer footer footer";
+
+  }
+}
+
+@media (max-width: 900px) {
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 14fr 1fr;
+    grid-template-areas:  "header"
+                          "sidebar"
+                          "sidebar2"
+                          "main2"
+                          "footer";
+
+  }
+}
