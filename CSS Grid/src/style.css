@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+h3 span {
+  font-size: 24px;
+}
+
+p {
+  font-size: 24px;
+}
+
+i {
+  font-size: 36px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 4px;
+}
+
+.container > div:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+.container > div:nth-of-type(6) {
+  grid-column: 3 / 5;
+}
+
+.container > div:nth-of-type(7) {
+  grid-column: 1 / 3;
+}
+
+.container > div:nth-of-type(12) {
+  grid-column: 3 / 5;
+}
+
+.container > div {
+  position: relative;
+  height: 210px;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.container > div::after {
+  position: absolute;
+  content: "";
+  background-color: #333;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+}
+
+.container > div:hover::after {
+  content: "";
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.container > div:hover {
+  opacity: 1;
+  transform: scale(0.98);
+  transition: all 0.4s ease;
+}
+
+.bg1 {
+  background: url("img/dawn.jpg");
+}
+
+.bg2 {
+  background: url("img/fall.jpg");
+}

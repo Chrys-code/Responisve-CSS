@@ -1,0 +1,17 @@
+@media (max-width: 915px) {
+  h3 {
+    font-size: 18px;
+  }
+
+  h3 span {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  i {
+    font-size: 18px;
+  }
+}
